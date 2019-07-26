@@ -102,6 +102,11 @@ func (client *zeromqClient) Subscribe(topics []types.TopicChannel, messageErrors
 	client.quitSubscribe = make(chan interface{})
 	client.messageErrors = messageErrors
 	client.subscribers = make([]*zeromqSubscriber, len(topics))
+
+	client.publisher.SetTcpKeepalive(1)
+	client.publisher.SetTcpKeepaliveIdle(300)
+	client.publisher.SetTcpKeepaliveIntvl(300)
+
 	var errorsSubscribe []error
 	var err error
 
