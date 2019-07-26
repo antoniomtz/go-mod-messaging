@@ -1,4 +1,4 @@
-module github.com/edgexfoundry/go-mod-messaging
+module github.com/antoniomtz/go-mod-messaging
 
 require (
 	github.com/pebbe/zmq4 v1.0.0
