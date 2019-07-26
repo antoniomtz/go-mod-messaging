@@ -19,7 +19,7 @@ package messaging
 import (
 	"testing"
 
-	"github.com/edgexfoundry/go-mod-messaging/pkg/types"
+	"github.com/antoniomtz/go-mod-messaging/pkg/types"
 	"github.com/stretchr/testify/assert"
 )
 

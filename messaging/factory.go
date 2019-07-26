@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/edgexfoundry/go-mod-messaging/pkg/types"
+	"github.com/antoniomtz/go-mod-messaging/pkg/types"
 
-	"github.com/edgexfoundry/go-mod-messaging/internal/pkg/zeromq"
+	"github.com/antoniomtz/go-mod-messaging/internal/pkg/zeromq"
 )
 
 const (
