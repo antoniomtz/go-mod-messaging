@@ -241,14 +241,11 @@ func (client *zeromqClient) bindToPort(msgQueueURL string) (err error) {
 		client.publisher.SetTcpKeepalive(1)
 		client.publisher.SetTcpKeepaliveIdle(300)
 		client.publisher.SetTcpKeepaliveIntvl(300)
+
 		if conErr := client.publisher.Bind(msgQueueURL); conErr != nil {
 			// wrapping the error with msgQueueURL info:
 			return fmt.Errorf("error: %v [%s]", conErr, msgQueueURL)
 		}
-
-		client.publisher.SetTcpKeepalive(1)
-		client.publisher.SetTcpKeepaliveIdle(300)
-		client.publisher.SetTcpKeepaliveIntvl(300)
 
 		// allow some time for socket binding before start publishing
 		time.Sleep(300 * time.Millisecond)
